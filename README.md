@@ -57,8 +57,7 @@ Now that we've mapped out how we want our data to be structured, let's start bui
 
   Let's finish this up by adding the appropriate methods to our models so that we can access related records.
 
-  #####In `movie.rb`
-
+  In `movie.rb`
   ```ruby
   class Movie < ActiveRecord::Base
     has_many :roles
@@ -66,8 +65,7 @@ Now that we've mapped out how we want our data to be structured, let's start bui
   end
   ```
 
-  #####In `person.rb`
-
+  In `person.rb`
   ```ruby
   class Person < ActiveRecord::Base
     has_many :roles
@@ -75,8 +73,7 @@ Now that we've mapped out how we want our data to be structured, let's start bui
   end
   ```
 
-  #####In `role.rb`
-
+  In `role.rb`
   ```ruby
   class Role < ActiveRecord::Base
     belongs_to :movie
@@ -199,10 +196,10 @@ Now that we've mapped out how we want our data to be structured, let's start bui
 
   By creating a simple HTML page with some JavaScript and jQuery inside our `public` directory, we can write some AJAX requests and test if our routes and controllers are working.
 
-###### **Roles**
+##### **Roles**
   Once Movies and People have been taken care of, the only thing that's left is to handle Roles. We can probably start out in the same way as with Movies and People - by making a controller and some routes.
 
-  `roles_controller.rb`
+  In `roles_controller.rb`
   ```ruby
   class RolesController < ApplicationController
 
@@ -246,7 +243,7 @@ Now that we've mapped out how we want our data to be structured, let's start bui
   end
   ```
 
-  `routes.rb`
+  In `routes.rb`
   ```ruby
   resources :movies, :people, :roles
   ```
